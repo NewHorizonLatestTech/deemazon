@@ -1,0 +1,51 @@
+(add this url in urls.py)
+
+urls.py
+
+    path('adeemaform5/', views.adeemaform5, name='adeemaform5'),
+
+(add this function in views.py)
+
+views.py
+
+def adeemaform5(request):
+    return render(request,'adeemaform5.html')
+
+(add this model in models.py)
+
+models.py
+
+class foodpackage(models.Model):
+    name = models.CharField(max_length=50,default="")
+    phone_no  = models.CharField(max_length=11,default="")
+    room_no = models.IntegerField(max_length=3,default="")
+    days_of_stay = models.IntegerField(max_length=3,default="")
+    foodpackagename = models.CharField(max_length=50,default="")
+    email = models.CharField(max_length=50,default="")
+    password = models.CharField(max_length=50,default="")
+    age = models.CharField(max_length=50,default="")
+    gender = models.CharField(max_length=50,default="")
+    def __str__(self):
+        return self.name
+
+
+(add this model in admin.py)
+
+admin.py
+
+from .models import foodpackage
+admin. site.register(foodpackage)
+
+(given html page should be add in templates)
+
+adeemaform5.html
+
+
+(go to terminal, write this)
+
+1. python manage.py makemigrations
+
+2. python manage.py migrate
+
+3. python manage.py runserver
+

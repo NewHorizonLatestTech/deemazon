@@ -1,0 +1,54 @@
+(add this url in urls.py)
+
+urls.py
+
+    path('adeemaform3/', views.adeemaform3, name='adeemaform3'),
+
+(add this function in views.py)
+
+views.py
+
+def adeemaform3(request):
+    return render(request,'adeemaform3.html')
+
+(add this model in models.py)
+
+models.py
+
+class tour_package(models.Model):
+    name = models.CharField(max_length=50,default="")
+    phone_no  = models.CharField(max_length=11,default="")
+    room_no = models.IntegerField(max_length=3,default="")
+    days_of_stay = models.IntegerField(max_length=3,default="")
+    tourpackagedetail = models.CharField(max_length=50,default="")
+    transportdetail = models.CharField(max_length=50,default="")
+    tourareadetail = models.CharField(max_length=50,default="")
+    email = models.CharField(max_length=50,default="")
+    password = models.CharField(max_length=50,default="")
+    age = models.CharField(max_length=50,default="")
+    gender = models.CharField(max_length=50,default="")
+    def __str__(self):
+        return self.name
+         
+         
+
+(add this model in admin.py)
+
+admin.py
+
+from .models import tour_package 
+admin. site.register(tour_package)
+
+(given html page should be add in templates)
+
+adeemaform3.html
+
+
+(go to terminal, write this)
+
+1. python manage.py makemigrations
+
+2. python manage.py migrate
+
+3. python manage.py runserver
+

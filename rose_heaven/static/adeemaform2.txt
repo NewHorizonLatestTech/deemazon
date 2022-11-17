@@ -1,0 +1,53 @@
+(add this url in urls.py)
+
+urls.py
+
+    path('adeemaform2/', views.adeemaform2, name='adeemaform2'),
+
+(add this function in views.py)
+
+views.py
+
+def adeemaform2(request):
+    return render(request,'adeemaform2.html')
+
+(add this model in models.py)
+
+models.py
+
+
+class customer_tourist(models.Model):
+    name = models.CharField(max_length=50,default="")
+    father_name = models.CharField(max_length=50,default="")
+    email = models.CharField(max_length=50,default="")
+    password = models.CharField(max_length=50,default="")
+    age = models.CharField(max_length=50,default="")
+    gender = models.CharField(max_length=50,default="")
+    cnic = models.CharField(max_length=50,default="")
+    phone_no  = models.CharField(max_length=11,default="")
+    dececription = models.TextField(max_length=50,default="")   
+    def __str__(self):
+        return self.name
+    
+    
+
+(add this model in admin.py)
+
+admin.py
+
+from .models import customer_tourist 
+admin. site.register(customer_tourist)
+
+(given html page should be add in templates)
+
+adeemaform2.html
+
+
+(go to terminal, write this)
+
+1. python manage.py makemigrations
+
+2. python manage.py migrate
+
+3. python manage.py runserver
+

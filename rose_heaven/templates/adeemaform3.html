@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adeemaform_3</title>
+</head>
+<body>
+ 
+
+    <!-- ADEEMA FORM 3 -->
+    <center>
+        <div id="maindiv">
+            <div id="div1">
+                <form id="form" method="POST" action="{% url 'contact' %}">
+       
+                    <pre> <H1>Name              <input id="name" placeholder="Name" type="text"></H1></pre>
+                    <pre> <H1>phone_no          <input id="phone_no" placeholder="phone_no" type="text"></H1></pre>
+                    <pre> <H1>room_no           <input id="room_no" placeholder="room_no" type="text"></H1></pre>
+                    <pre> <H1>days_of_stay      <input id="days_of_stay" placeholder="days_of_stay" type="days_of_stay"></H1></pre>
+                    <pre> <H1>tourpackagedetail <input id="tourpackagedetail" placeholder="tourpackagedetail" type="text"></H1></pre>
+                    <pre> <H1>tourareadetail    <input id="tourareadetail" placeholder="tourareadetail" type="text"></H1></pre>
+                    <pre> <H1>email             <input id="email" placeholder="email" type="email"></H1></pre>
+                    <pre> <H1>password          <input id="password" placeholder="password" type="password"></H1></pre>
+                    <pre> <H1>age               <input id="age" placeholder="age" type="number"></H1></pre>
+                    <pre> <H1>gender            <input id="gender" placeholder="gender" type="text"></H1></pre>
+                    <pre> <H1><button id="submit" type="submit">Submit</button> </H1></pre>
+                </form>
+            </div>
+        </div>
+    </center>
+
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            padding: 10px;
+            background-image: url('https://images.unsplash.com/photo-1613339027986-b94d85708995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        #form {
+            background-color: rgb(136, 10, 142);
+            text-align: left;
+            border-radius: 30px;
+            width: 500px;
+            height: 900px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #maindiv {
+            background-color: rgb(48, 181, 11);
+            border-radius: 30px;
+            width: 650px;
+            height: 1100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+
+        #div1 {
+            background-color: rgb(33, 16, 162);
+            border-radius: 30px;
+            width: 600px;
+            height: 1000px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+     
+
+        input{
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 30px;
+            box-shadow: 30px wheat;
+
+        }
+
+
+        #submit {
+            background-color: red;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            border-radius: 10px;
+
+        }
+
+        
+        /* #name,             
+        #phone_no,  
+        #room_no,   
+        #days_of_stay,   
+        #tourpackagedetail,
+        #tourareadetail,  
+        #email,         
+        #password,      
+        #age,            
+        #gender{         
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 30px;
+            box-shadow: 30px wheat;
+
+        } */
+    </style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>adeemaform_1</title>
+</head>
+
+<body id="body">
+
+  <!-- ADEEMA FORM 1 -->
+
+  <center>
+
+    <div id="div1">
+      <div id="maindiv">
+        <form id="form" onclick="mclick()" onmouseleave="mleave()" onmouseenter="menter()" method="POST"
+          action="{% url 'contact' %}">
+
+          <pre> <H1>name       <input id="name" placeholder="name" type="text"></H1></pre>
+          <pre> <H1>email      <input id="email" placeholder="email" type="email"></H1></pre>
+          <pre> <H1>password   <input id="password" placeholder="password" type="password"></H1></pre>
+          <pre> <H1>age        <input id="age" placeholder="age" type="number"></H1></pre>
+          <pre> <H1>cnic       <input id="cnic" placeholder="cnic" type="number"></H1></pre>
+          <pre> <H1>father_name <input id="fathername" placeholder="father_name" type="text"></H1></pre>
+          <pre> <H1>dateTime   <input id="datetime" placeholder="dateTime" type="datetime-local"></H1></pre>
+          <pre> <H1><button id="submit" type="submit">submit</button> </H1></pre>
+        </form>
+      </div>
+    </div>
+  </center>
+
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      padding: 20px;
+    }
+
+    #form {
+      background-color: rgb(136, 202, 55);
+      text-align: left;
+      border-radius: 30px;
+      width: 500px;
+      height: 700px;
+      margin: 20px;
+      padding: 20px;
+    }
+
+
+    #maindiv {
+      background-color: rgb(33, 16, 162);
+      border-radius: 30px;
+      width: 600px;
+      height: 770px;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    #div1 {
+      background-color: rgb(202, 115, 22);
+      border-radius: 30px;
+      width: 650px;
+      height: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input {
+      width: 200px;
+      height: 30px;
+      text-align: center;
+      font-size: 20px;
+      border-radius: 30px;
+      box-shadow: 30px wheat;
+
+    }
+
+    #submit {
+      color: blue;
+      font-size: 20px;
+      border-radius: 10px;
+
+    }
+
+    /* #name,
+        #age,
+        #email,
+        #password,
+        #cnic,
+        #fathername,
+        #datetime {
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 30px;
+            box-shadow: 30px wheat;
+        
+        } */
+  </style>
+
+  <script>
+
+    function menter() {
+      document.getElementById('body').style.backgroundImage = "url('https://images.unsplash.com/photo-1621351813579-4ceefec7235c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')";
+      document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1621351813579-4ceefec7235c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')"
+    }
+    function mleave() {
+      document.getElementById('body').style.backgroundImage
+      document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1636866764019-e230ab5c9d08?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')"
+
+    }
+    function mclick() {
+      document.getElementById('body').style.backgroundImage
+      document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1621351615278-1a9ed1d7d644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')"
+
+    }
+
+  </script>
+
+</body>
+
+</html>
